@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lukho Bulumko Mgudlwa | Official Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: white;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 5, 5, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #e00000;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            background:
+                radial-gradient(circle at center, #251010 0%, #050505 55%);
+        }
+
+        .hero-content {
+            max-width: 1000px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 100px);
+            line-height: 0.95;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+        }
+
+        .red-line {
+            width: 90px;
+            height: 4px;
+            background: #e00000;
+            margin: 0 auto 25px;
+        }
+
+        .hero p {
+            font-size: 15px;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+        }
+
+        .hero .motto {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #bbb;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 14px 28px;
+            background: #e00000;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            background: #ff2222;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 7%;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: #e00000;
+        }
+
+        .section-intro {
+            color: #aaa;
+            max-width: 700px;
+            line-height: 1.8;
+            margin-bottom: 50px;
+        }
+
+        /* ABOUT */
+        .about {
+            max-width: 900px;
+        }
+
+        .about p {
+            color: #ccc;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid #222;
+            padding: 35px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #e00000;
+        }
+
+        .card h3 {
+            color: #e00000;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        /* CONTENT */
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .video {
+            aspect-ratio: 16 / 9;
+            background: #151515;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #222;
+            color: #777;
+        }
+
+        /* JOURNEY */
+        .journey {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .journey-box {
+            height: 250px;
+            background: #111;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #222;
+        }
+        .journey-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .journey-box h3 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 2;
+            color: white;
+        }
+        /* SOCIALS */
+        .socials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .social {
+            padding: 15px 25px;
+            background: #e00000;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .social:hover {
+            transform: translateY(-3px);
+            background: #ff2222;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px 7%;
+            text-align: center;
+            border-top: 1px solid #222;
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav .links {
+                display: none;
+            }
+
+            section {
+                padding: 75px 6%;
+            }
+
+            .cards,
+            .videos,
+            .journey {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                letter-spacing: 2px;
+            }
+
+            .hero p {
+                line-height: 1.8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">LUKHO</div>
+
+        <div class="links">
+            <a href="#about">About</a>
+            <a href="#content">Content</a>
+            <a href="#journey">Journey</a>
+            <a href="#connect">Connect</a>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="hero">
+        <img src="images/hero.jpg.jpg" alt="Lukho Bulumko Mgudlwa" class="hero-image">
+
+        <div class="hero-content">
+
+            <h1>LUKHO BULUMKO<br>MGUDLWA</h1>
+
+            <div class="red-line"></div>
+
+            <p>AMAPIANO • DANCE • ENTERTAINMENT • LIFESTYLE</p>
+
+            <p class="motto">
+                MOTIVATED • CLEAN • CONFIDENT • ENERGETIC • FUN
+            </p>
+
+            <a href="#about" class="button">EXPLORE MY WORLD</a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="about">
+
+            <h2 class="section-title">
+                WHO IS <span>LUKHO?</span>
+            </h2>
+
+            <p class="section-intro">
+                Creating. Growing. Never Giving Up.
+            </p>
+
+            <p>
+                I'm Lukho Bulumko Mgudlwa — a South African creator
+                passionate about Amapiano, dance, entertainment and
+                lifestyle content.
+            </p>
+
+            <p>
+                I create energetic and entertaining content while staying
+                true to who I am. My goal is to connect with people through
+                creativity, positivity and fun.
+            </p>
+
+            <p class="message">
+                My message is simple: <span style="color:#e00000;">
+                Never Give Up.</span>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CREATIVE AREAS -->
+    <section>
+
+        <h2 class="section-title">
+            MY <span>WORLD</span>
+        </h2>
+
+        <p class="section-intro">
+            The things that inspire my creativity and shape my journey.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>AMAPIANO</h3><img src="images/amapiano.jpg.jpeg" alt="Amapiano" width="100%"
+
+                <p>
+                    Music, culture and the sounds that inspire my content.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>DANCE</h3><img src="images/dance.jpg.jpg" alt="Dance" width="100%"
+
+                <p>
+                    Amapiano dance challenges, performances and creative
+                    movement.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>ENTERTAINMENT</h3><img src="images/entertainment.jpg.jpg" alt="Entertainment" width="100%"
+
+                <p>
+                    Fun, lifestyle, collaborations and moments from my
+                    creator journey.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTENT -->
+    <section id="content">
+
+        <h2 class="section-title">
+            MY <span>CONTENT</span>
+        </h2>
+
+        <p class="section-intro">
+            Watch, dance, vibe and follow my journey.
+        </p>
+
+        <div class="videos">
+
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/4I0B5kqNMsI" title="Lukho Bulumko Mgudlwa YouTube video" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/fOPi0izywRc" title="Lukho Bulumko Mgudlwa YouTube video" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/bnRF3MSPYYI" title="Lukho Bulumko Mgudlwa YouTube video" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/_0DSfr2_vJ0" title="Lukho Bulumko Mgudlwa YouTube video" allowfullscreen></iframe>
+
+        </div>
+
+    </section>
+
+
+    <!-- JOURNEY -->
+    <section id="journey">
+
+        <h2 class="section-title">
+            CREATING <span>•</span> GROWING <span>•</span> THE JOURNEY
+        </h2>
+
+        <p class="section-intro">
+            Every video, every step and every moment is part of the journey.
+        </p>
+
+        <div class="journey">
+
+            <div class="journey-box">
+                <img src="images/creating.jpg.jpg" alt="Creating" width="100%">
+                <h3>CREATING</h3>
+            </div>
+
+            <div class="journey-box">
+                <img src="images/growing.jpg.jpg" alt="Growing" width="100%">
+                <h3>GROWING</h3>
+            </div>
+
+            <div class="journey-box">
+                <img src="images/journey.jpg.jpg" alt="The Journey" width="100%">
+                <h3>THE JOURNEY</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONNECT -->
+    <section id="connect">
+
+        <h2 class="section-title">
+            FOLLOW MY <span>JOURNEY</span>
+        </h2>
+
+        <p class="section-intro">
+            Stay connected and catch my latest content.
+        </p>
+
+        <div class="socials">
+
+            <a href="https://www.youtube.com/@lukhobulumkomgudlwa" class="social">YOUTUBE</a>
+            <a href="https://www.instagram.com/official_lukhomgudlwa2009?stkn=MTZ5cWpqMGhxNWhzdg==" class="social">INSTAGRAM</a>
+            <a href="https://www.tiktok.com/@official_alexmgudlwa2009" class="social">TIKTOK</a>
+            <a href="https://www.facebook.com/official.lukhomgudlwa2009" class="social">FACEBOOK</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        © 2026 Lukho Bulumko Mgudlwa. All rights reserved.
+
+    </footer>
+
+</body>
+</html>
