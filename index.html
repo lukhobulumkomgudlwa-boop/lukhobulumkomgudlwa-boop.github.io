@@ -256,34 +256,153 @@
         }
 
         /* MOBILE */
-        @media (max-width: 768px) {
+@media (max-width: 768px) {
 
-            nav {
-                padding: 18px 5%;
-            }
+    /* NAVIGATION */
+    nav {
+        padding: 16px 5%;
+    }
 
-            nav .links {
-                display: none;
-            }
+    .logo {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+    }
 
-            section {
-                padding: 75px 6%;
-            }
+    nav .links {
+        display: none;
+    }
 
-            .cards,
-            .videos,
-            .journey {
-                grid-template-columns: 1fr;
-            }
+    /* HERO */
+    .hero {
+        min-height: 100svh;
+        padding: 110px 20px 50px;
+    }
 
-            .hero h1 {
-                letter-spacing: 2px;
-            }
+    .hero-content {
+        width: 100%;
+    }
 
-            .hero p {
-                line-height: 1.8;
-            }
-        }
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 58px);
+        line-height: 1;
+        letter-spacing: 1px;
+        margin-bottom: 22px;
+    }
+
+    .red-line {
+        width: 65px;
+        height: 3px;
+        margin-bottom: 22px;
+    }
+
+    .hero p {
+        font-size: 12px;
+        line-height: 1.8;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .hero .motto {
+        font-size: 10px;
+        line-height: 1.7;
+        letter-spacing: 1.5px;
+    }
+
+    .button {
+        margin-top: 28px;
+        padding: 13px 22px;
+        font-size: 13px;
+    }
+
+    /* SECTIONS */
+    section {
+        padding: 75px 6%;
+    }
+
+    .section-title {
+        font-size: clamp(28px, 8vw, 38px);
+        line-height: 1.15;
+    }
+
+    .section-intro {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 35px;
+    }
+
+    /* ABOUT */
+    .about {
+        width: 100%;
+    }
+
+    .about p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .message {
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    /* CARDS */
+    .cards,
+    .videos,
+    .journey {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* VIDEOS */
+    .video {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        font-size: 13px;
+    }
+
+    /* JOURNEY */
+    .journey-box {
+        min-height: 200px;
+        padding: 22px;
+    }
+
+    .journey-box h3 {
+        font-size: 18px;
+    }
+
+    /* SOCIALS */
+    .socials {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .social {
+        padding: 14px 10px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 30px 6%;
+        font-size: 11px;
+        line-height: 1.6;
+    }
+}
     </style>
 </head>
 
